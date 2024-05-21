@@ -1,5 +1,5 @@
 # Word Battleってな～んだ！？
-<br>
+
 ## Hello World!
 やあ、Kuroさんだよ。
 GitHubのコードを見返していたら、そこそこ面白いゲームを見つけたから
