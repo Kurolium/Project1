@@ -116,7 +116,7 @@ function Fight() {
           alert(`あなたはHPが${H}回復した`)
         }
       } else {
-        H = My_HP + Math.floor(Math.random() * 25) + 10;
+        H = My_HP + Math.floor(Math.random() * 50) + 30;
         My_HP = My_HP + H
         if (My_HP >= 2000) {
           alert(`あなたのHPは上限値です`)
