@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>廃品</title>
+</head>
+<body>
+    <!--ダイアログたち-->
+    <dialog id='Start'>
+        <div>開始しますか？</div>
+        <br>
+        <div>
+            <form method="dialog">
+                <button id="Start" onclick="Battle()">はい</button>
+                <button id='close'>いいえ</button>
+            </form>
+        </div>
+    </dialog>
+
+    <dialog id="Word">
+        <div>ワードを打ち込んでください</div>
+        <br>
+        <input type="text" name="text" id="Text">
+        <form method="dialog">
+            <div>
+                <button id="battle" onclick="Fight()">Attack!!</button>
+                <button id="close">キャンセル</button>
+            </div>
+        </form>
+    </dialog>
+
+    <dialog id="Clear">
+        <div>GAME CLEAR!!</div>
+        <div>~敵を倒した~</div>
+
+        <form method="dialog">
+            <button onclick="Back()">タイトルに戻る</button>
+        </form>
+    </dialog>
+
+    <dialog id="GAME_OVER">
+        <div>GAME OVER!!</div>
+
+        <form method="dialog">
+            <button onclick="Back()">タイトルに戻る</button>
+        </form>
+    </dialog>
+
+    <dialog id="K_O">
+        <div>相手を倒した</div>
+
+        <form method="dialog">
+            <button onclick="NEXT()">次に進む</button>
+        </form>
+    </dialog>
+
+    <dialog id="rules">
+        <div>試合が始まるとWordというボタンが出てきます。<br>
+            これを押すと、テキストボックスが出てくるので、ここに技の名前を打ち込みましょう！<br>
+            相手の技は一部を除いてすべて使うことができます。<br>
+            (※収録されていない言葉もあります)<br>
+            <br>
+            それじゃ最初は「パンチ」や「キック」を使用して攻略してみましょう！！
+        </div>
+        <form method="dialog">
+            <button id="close">戻る</button>
+        </form>
+    </dialog>
+
+    <!--最初の画面-->    <h1 id="title">Word Battle</h1>
+
+
+    <p id="Ename"></p>
+
+    <button id='open' onclick="Start()">スタート</button>
+
+    <button id="rule" onclick="rules()">遊び方</button>
+
+    <p id="ver">v1.0.9</p>
+
+    <br>
+</body>
+<script src="index.js"></script>
+</html>

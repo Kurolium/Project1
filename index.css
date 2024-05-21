@@ -1,0 +1,19 @@
+#title {
+    font-size: 100px;
+    padding-top: 50px;
+    margin-bottom: 0px;
+}
+
+body {
+    text-align: center;
+}
+
+#Fdialog {
+    position: fixed;
+    width: 1200px; height: 100px;
+}
+
+dialog {
+    margin: auto;
+    top: 100px;
+}
