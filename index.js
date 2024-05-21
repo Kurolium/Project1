@@ -106,6 +106,7 @@ function Fight() {
     }
 
     if (elementToCheck == "回復魔法" || elementToCheck == "超回復魔法") {
+      H = 0
       MODE = "回復"
       if (elementToCheck == "回復魔法") {
         H = My_HP + Math.floor(Math.random() * 5) + 10;
@@ -567,13 +568,13 @@ function Last() {
       }
     
     } else if (pattern == "3") {
-      const recoverly = Math.floor(Math.random() * 70) + 50 * Attack * E_Power
+      const recoverly = Math.floor(Math.random() * 70) + 50 * Attack
       alert(`${document.getElementById("Ename").textContent}は回復魔法を使用した`)
       alert(`${document.getElementById("Ename").textContent}は${recoverly}回復した`)
       E_HP = E_HP + recoverly
 
     } else if (pattern == "4") {
-      damage = Math.floor(Math.random() * 20) + 80 * Attack
+      damage = Math.floor(Math.random() * 20) + 50* Attack
       alert(`${document.getElementById("Ename").textContent}は正拳突きを放ってきた`)
       if (MODE == "カウンター") {
         damage = damage * 2
