@@ -11,6 +11,7 @@ let M = "off"
 let P_Turn = 0
 let B_turn = 0
 let MODE = "noraml"
+let value = 0
 
 function rules() {
   const dialog = document.getElementById("rules");
@@ -144,19 +145,6 @@ function Fight() {
       alert('このターンの攻撃を気で察知して避けに専念した！！')
       MODE = "回避"
 
-    } else if (elementToCheck == "くぁｗせｄｒｆｔｇｙふじこｌｐ") {
-      if (document.getElementById("Ename").textContent == "りんご") {
-        alert('りんご[よくぞ私が真の魔王であると見抜いたな]')
-      
-        document.getElementById("Ename").innerHTML = "???"
-        E_HP = 100000
-        document.getElementById("title").innerHTML = "<img src='Enemy5.jpg'>"
-        My_HP = 100
-        let HP = document.createElement("p")
-        HP.setAttribute('id','HP')
-        document.body.appendChild(HP)
-        document.getElementById("HP").innerHTML = `Your HP:${My_HP}`
-      }
     } else {
       E_HP = E_HP - value
       alert(`あなたは${elementToCheck}を繰り出した！！`)
@@ -632,8 +620,8 @@ function Last() {
       } else if (MODE == "回避")  {
         alert('しかし、技を察知して回避した')
       } else {
-        alert(`${document.getElementById("Ename").textContent}は${damage}回復した`)
         alert(`は${damage}のダメージを受けた`)
+        alert(`${document.getElementById("Ename").textContent}は${damage}回復した`)
         My_HP = My_HP - damage
         E_HP = E_HP + damage
       };
@@ -642,7 +630,7 @@ function Last() {
       alert(`${document.getElementById("Ename").textContent}は様子をうかがっている`)
 
     } if (pattern == "9") {
-      damage = Math.floor(Math.random() * 40) + 25 * Attack * E_Power
+      damage = Math.floor(Math.random() * 20) + 30 * Attack * E_Power
       alert(`${document.getElementById("Ename").textContent}はカウンターと回避を読む攻撃を仕掛けた`)
       if (MODE == "カウンター" || MODE == "回避" || MODE == "回復") {
         My_HP = My_HP - damage
